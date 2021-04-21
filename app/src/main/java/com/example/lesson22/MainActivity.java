@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        int[] numberIds = new int[] {
+        int[] numberIds = new int[]{
                 R.id.zero,
                 R.id.one,
                 R.id.two,
@@ -119,11 +119,11 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nine
         };
 
-        int[] actionsIds = new int[] {
+        int[] actionsIds = new int[]{
                 R.id.plus,
                 R.id.minus,
                 R.id.umnojenie,
-                R.id.delelenie,
+                R.id.delenie,
                 R.id.resulting
         };
 
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             findViewById(actionsIds[i]).setOnClickListener(actionButtonOnclickListener);
         }
 
-        findViewById(R.id.clear).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.clear_text).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 calculator.reset();
@@ -166,5 +166,268 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*<TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tt_result"
 
+        >
+
+        <TableRow
+            android:id="@+id/row_index_key1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginStart="10dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="AC"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF5722"
+
+                />
+
+            <Button
+                android:id="@+id/pozitive_or_negative"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="+/-"
+                android:textSize="30sp"
+
+                />
+
+            <Button
+                android:id="@+id/percents"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="%"
+                android:textSize="30sp"
+
+                />
+
+            <Button
+                android:id="@+id/delelenie"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="/"
+                android:textSize="30sp"
+
+                />
+
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/seven"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginStart="10dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="7"
+                android:textSize="35sp"
+
+                />
+
+            <Button
+                android:id="@+id/eight"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="8"
+                android:textSize="35sp"
+
+                />
+
+            <Button
+                android:id="@+id/nine"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="9"
+                android:textSize="35sp"
+
+                />
+
+            <Button
+                android:id="@+id/umnojenie"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="*"
+                android:textSize="35sp"
+
+                />
+
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/four"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginStart="10dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="4"
+                android:textSize="35sp"
+
+                />
+
+            <Button
+                android:id="@+id/five"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="5"
+                android:textSize="35sp"
+
+                />
+
+            <Button
+                android:id="@+id/six"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="6"
+                android:textSize="35sp"
+
+                />
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="-"
+                android:textSize="45sp"
+
+                />
+
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/one"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginStart="10dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="1"
+                android:textSize="35sp"
+
+                />
+
+            <Button
+                android:id="@+id/two"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="2"
+                android:textSize="35sp"
+
+                />
+
+            <Button
+                android:id="@+id/three"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="3"
+                android:textSize="35sp"
+
+                />
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="+"
+                android:textSize="35sp"
+
+                />
+
+
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/zero"
+                android:layout_column="1"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="0"
+
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/floating"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="."
+                android:textSize="35sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/light"
+
+
+                />
+
+            <Button
+                android:id="@+id/resulting"
+                android:layout_marginHorizontal="5dp"
+                android:width="80dp"
+                android:height="90dp"
+                android:background="@drawable/oval"
+                android:text="="
+                android:textColor="@color/white"
+                android:backgroundTint="#FF5722"
+
+                android:textSize="35sp"
+
+                />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+*/
 }

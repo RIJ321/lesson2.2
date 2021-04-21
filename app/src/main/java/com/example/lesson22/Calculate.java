@@ -20,6 +20,7 @@ public class Calculate extends AppCompatActivity {
         resultShow,
     }
 
+
     public Calculate() {
         state = State.firstArgInput;
     }
@@ -84,7 +85,7 @@ public class Calculate extends AppCompatActivity {
                 case R.id.umnojenie:
                     inputStr.append(firstArg * secondArg);
                     break;
-                case R.id.delelenie:
+                case R.id.delenie:
                     inputStr.append(firstArg / secondArg);
                     break;
             }
@@ -93,20 +94,7 @@ public class Calculate extends AppCompatActivity {
             firstArg = Integer.parseInt(inputStr.toString());
             state = State.secondArgInput;
             actionSelected = actionId;
-            switch (actionId){
-                 case R.id.plus:
-                    actionSelected = R.id.plus;
-                    break;
-                case R.id.minus:
-                    actionSelected = R.id.minus;
-                    break;
-                case R.id.umnojenie:
-                    actionSelected = R.id.umnojenie;
-                    break;
-                case R.id.delelenie:
-                    actionSelected = R.id.delelenie;
-                    break;
-            }
+
         }
     }
 
@@ -144,7 +132,7 @@ public class Calculate extends AppCompatActivity {
                 return '-';
             case R.id.umnojenie:
                 return '*';
-            case R.id.delelenie:
+            case R.id.delenie:
             default:
                 return '/';
 
@@ -156,12 +144,6 @@ public class Calculate extends AppCompatActivity {
         inputStr.setLength(0);
     }
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculate);
-    }
 
 
 }

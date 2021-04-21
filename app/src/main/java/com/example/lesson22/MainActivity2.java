@@ -38,7 +38,7 @@ public class MainActivity2 extends AppCompatActivity {
                 R.id.plus,
                 R.id.minus,
                 R.id.umnojenie,
-                R.id.delelenie,
+                R.id.delenie,
                 R.id.resulting
         };
 
@@ -70,7 +70,7 @@ public class MainActivity2 extends AppCompatActivity {
             findViewById(actionsIds[i]).setOnClickListener(actionButtonOnclickListener);
         }
 
-        findViewById(R.id.clear).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.clear_text).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 calculator.reset();
